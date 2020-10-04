@@ -56,7 +56,7 @@ const AppContainer = ({ logoutAction, currentUser }) => {
       </AppBar>
 
       <Switch>
-        <Route path="/tveks/:channel" component={HomePage} />
+        <Route path="/:channel" component={HomePage} />
       </Switch>
     </React.Fragment>
   );

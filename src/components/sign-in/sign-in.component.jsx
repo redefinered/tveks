@@ -49,7 +49,10 @@ class SignIn extends React.Component {
             I-login mo email mo, beks.
           </Typography>
           <Typography variant="subtitle1" gutterBottom>
-            Kung wala kang account, lumayas ka dito!
+            Kung wala kang account, lumayas ka dito!{' '}
+            <span role="img" aria-label="angry">
+              😡
+            </span>
           </Typography>
         </Box>
         {authError && (
