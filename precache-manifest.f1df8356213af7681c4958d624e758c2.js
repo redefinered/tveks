@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "516ef86c87d8f8a4a775000f5aaa5e80",
+    "revision": "d9ed264c41241713ff12d07a8ecce27c",
     "url": "/tveks/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tveks/static/css/2.55a8bb14.chunk.css"
   },
   {
-    "revision": "d1bf2bafe826068f51db",
+    "revision": "23c6eaee2e2462e5c7a7",
     "url": "/tveks/static/css/main.87493889.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tveks/static/js/2.1129c9e8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d1bf2bafe826068f51db",
-    "url": "/tveks/static/js/main.f9550890.chunk.js"
+    "revision": "23c6eaee2e2462e5c7a7",
+    "url": "/tveks/static/js/main.80762dfd.chunk.js"
   },
   {
     "revision": "fe9517e040a8b380dbd1",
