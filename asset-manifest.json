@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.87493889.chunk.css",
-    "main.js": "/static/js/main.f9550890.chunk.js",
-    "main.js.map": "/static/js/main.f9550890.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.171bc21a.js",
-    "runtime-main.js.map": "/static/js/runtime-main.171bc21a.js.map",
-    "static/css/2.316749da.chunk.css": "/static/css/2.316749da.chunk.css",
-    "static/js/2.42e58e19.chunk.js": "/static/js/2.42e58e19.chunk.js",
-    "static/js/2.42e58e19.chunk.js.map": "/static/js/2.42e58e19.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6497e90f90b812e731af60923b797523.js": "/precache-manifest.6497e90f90b812e731af60923b797523.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.316749da.chunk.css.map": "/static/css/2.316749da.chunk.css.map",
-    "static/css/main.87493889.chunk.css.map": "/static/css/main.87493889.chunk.css.map",
-    "static/js/2.42e58e19.chunk.js.LICENSE.txt": "/static/js/2.42e58e19.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/static/media/roboto-vietnamese-400-normal.a8be5b46.woff2"
+    "main.css": "/tveks/static/css/main.87493889.chunk.css",
+    "main.js": "/tveks/static/js/main.f9550890.chunk.js",
+    "main.js.map": "/tveks/static/js/main.f9550890.chunk.js.map",
+    "runtime-main.js": "/tveks/static/js/runtime-main.5b036d84.js",
+    "runtime-main.js.map": "/tveks/static/js/runtime-main.5b036d84.js.map",
+    "static/css/2.55a8bb14.chunk.css": "/tveks/static/css/2.55a8bb14.chunk.css",
+    "static/js/2.1129c9e8.chunk.js": "/tveks/static/js/2.1129c9e8.chunk.js",
+    "static/js/2.1129c9e8.chunk.js.map": "/tveks/static/js/2.1129c9e8.chunk.js.map",
+    "index.html": "/tveks/index.html",
+    "precache-manifest.cf696262f01351a4c01866b4b331fdbd.js": "/tveks/precache-manifest.cf696262f01351a4c01866b4b331fdbd.js",
+    "service-worker.js": "/tveks/service-worker.js",
+    "static/css/2.55a8bb14.chunk.css.map": "/tveks/static/css/2.55a8bb14.chunk.css.map",
+    "static/css/main.87493889.chunk.css.map": "/tveks/static/css/main.87493889.chunk.css.map",
+    "static/js/2.1129c9e8.chunk.js.LICENSE.txt": "/tveks/static/js/2.1129c9e8.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/tveks/static/media/roboto-vietnamese-400-normal.a8be5b46.woff2"
   },
   "entrypoints": [
-    "static/js/runtime-main.171bc21a.js",
-    "static/css/2.316749da.chunk.css",
-    "static/js/2.42e58e19.chunk.js",
+    "static/js/runtime-main.5b036d84.js",
+    "static/css/2.55a8bb14.chunk.css",
+    "static/js/2.1129c9e8.chunk.js",
     "static/css/main.87493889.chunk.css",
     "static/js/main.f9550890.chunk.js"
   ]
