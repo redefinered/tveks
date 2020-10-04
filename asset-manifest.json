@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tveks/static/css/main.87493889.chunk.css",
-    "main.js": "/tveks/static/js/main.3f605331.chunk.js",
-    "main.js.map": "/tveks/static/js/main.3f605331.chunk.js.map",
+    "main.js": "/tveks/static/js/main.111a8920.chunk.js",
+    "main.js.map": "/tveks/static/js/main.111a8920.chunk.js.map",
     "runtime-main.js": "/tveks/static/js/runtime-main.5b036d84.js",
     "runtime-main.js.map": "/tveks/static/js/runtime-main.5b036d84.js.map",
     "static/css/2.55a8bb14.chunk.css": "/tveks/static/css/2.55a8bb14.chunk.css",
     "static/js/2.a061f7a6.chunk.js": "/tveks/static/js/2.a061f7a6.chunk.js",
     "static/js/2.a061f7a6.chunk.js.map": "/tveks/static/js/2.a061f7a6.chunk.js.map",
     "index.html": "/tveks/index.html",
-    "precache-manifest.e51de95892d8ee00b855056d8233be41.js": "/tveks/precache-manifest.e51de95892d8ee00b855056d8233be41.js",
+    "precache-manifest.95bd2975ece5c78c449b0c7ae2af2e5d.js": "/tveks/precache-manifest.95bd2975ece5c78c449b0c7ae2af2e5d.js",
     "service-worker.js": "/tveks/service-worker.js",
     "static/css/2.55a8bb14.chunk.css.map": "/tveks/static/css/2.55a8bb14.chunk.css.map",
     "static/css/main.87493889.chunk.css.map": "/tveks/static/css/main.87493889.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.55a8bb14.chunk.css",
     "static/js/2.a061f7a6.chunk.js",
     "static/css/main.87493889.chunk.css",
-    "static/js/main.3f605331.chunk.js"
+    "static/js/main.111a8920.chunk.js"
   ]
 }
