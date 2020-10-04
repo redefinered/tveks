@@ -23,7 +23,7 @@ export function* signInWithGoogleRequest() {
     const { user } = yield auth.signInWithPopup(googleProvider);
     yield getSnapshotFromUserAuth(user);
   } catch (error) {
-    yield put(Creators.signInFailure(error));
+    yield put(Creators.signInFailure(error.message));
   }
 }
 
@@ -35,7 +35,7 @@ export function* signInWithEmailRequest(action) {
     console.log('user', user);
     yield getSnapshotFromUserAuth(user);
   } catch (error) {
-    yield put(Creators.signInFailure(error));
+    yield put(Creators.signInFailure(error.message));
   }
 }
 

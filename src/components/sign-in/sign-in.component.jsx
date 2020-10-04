@@ -1,8 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Container from '@material-ui/core/Container';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import Alert from '@material-ui/lab/Alert';
+import Box from '@material-ui/core/Box';
+
 import FormInput from 'components/form-input/form-input.component';
-import CustomButton from 'components/custom-button/custom-button.component';
 
 import { connect } from 'react-redux';
 import { Creators as UserActionCreators } from 'modules/ducks/auth/auth.actions';
@@ -32,11 +39,24 @@ class SignIn extends React.Component {
   };
 
   render() {
-    return (
-      <div className="sign-in">
-        <h2>I already have an account</h2>
-        <span>Sign in with your email and password</span>
+    const { isFetching, error: authError } = this.props;
 
+    return (
+      <Container maxWidth="sm">
+        {isFetching && <LinearProgress />}
+        <Box pt={2}>
+          <Typography variant="h3" gutterBottom>
+            I-login mo email mo, beks.
+          </Typography>
+          <Typography variant="subtitle1" gutterBottom>
+            Kung wala kang account, lumayas ka dito!
+          </Typography>
+        </Box>
+        {authError && (
+          <Alert style={{ marginBottom: 10 }} severity="error">
+            {authError}
+          </Alert>
+        )}
         <form onSubmit={this.handleSubmit}>
           <FormInput
             name="email"
@@ -55,13 +75,12 @@ class SignIn extends React.Component {
             required
           />
           <div className="buttons">
-            <CustomButton type="submit"> Sign in </CustomButton>
-            <CustomButton type="button" onClick={this.props.googleSignInAction} isGoogleSignIn>
-              Sign in with Google
-            </CustomButton>
+            <Button type="submit" variant="contained" color="primary">
+              I-pasok mo!
+            </Button>
           </div>
         </form>
-      </div>
+      </Container>
     );
   }
 }
@@ -71,9 +90,14 @@ SignIn.propTypes = {
   googleSignInAction: PropTypes.func
 };
 
+const mapStateToProps = (state) => {
+  const { isFetching, error } = state.auth;
+  return { isFetching, error };
+};
+
 const actions = {
   emailSignInAction: UserActionCreators.emailSignIn,
   googleSignInAction: UserActionCreators.googleSignIn
 };
 
-export default connect(null, actions)(SignIn);
+export default connect(mapStateToProps, actions)(SignIn);
