@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "664b67d7df46e1f8f17153d38868a38b",
+    "revision": "97535deaf5f19804da761692c392be51",
     "url": "/tveks/index.html"
   },
   {
-    "revision": "424827e026cf3cafdac6",
+    "revision": "a23336ee615feda325ea",
     "url": "/tveks/static/css/2.55a8bb14.chunk.css"
   },
   {
-    "revision": "a82184b22c733ca3a7be",
+    "revision": "15710a0d60c96154d1fe",
     "url": "/tveks/static/css/main.87493889.chunk.css"
   },
   {
-    "revision": "424827e026cf3cafdac6",
-    "url": "/tveks/static/js/2.1129c9e8.chunk.js"
+    "revision": "a23336ee615feda325ea",
+    "url": "/tveks/static/js/2.45172b40.chunk.js"
   },
   {
     "revision": "4cd4bb82c3efd9af5440b12fb6d92f3f",
-    "url": "/tveks/static/js/2.1129c9e8.chunk.js.LICENSE.txt"
+    "url": "/tveks/static/js/2.45172b40.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a82184b22c733ca3a7be",
-    "url": "/tveks/static/js/main.82608015.chunk.js"
+    "revision": "15710a0d60c96154d1fe",
+    "url": "/tveks/static/js/main.639d5a88.chunk.js"
   },
   {
     "revision": "fe9517e040a8b380dbd1",
