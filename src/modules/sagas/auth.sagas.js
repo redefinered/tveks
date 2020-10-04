@@ -1,12 +1,12 @@
 import { takeLatest, put, call } from 'redux-saga/effects';
-import { Types, Creators } from 'modules/ducks/auth/auth.actions';
+import { Types, Creators } from '../ducks/auth/auth.actions';
 
 import {
   auth,
   googleProvider,
   createUserProfileDocument,
   getCurrentUser
-} from 'firebase-client/firebase.utils';
+} from '../../firebase.utils';
 
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
   try {

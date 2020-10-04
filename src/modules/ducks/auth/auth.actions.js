@@ -11,7 +11,8 @@ const { Types, Creators } = createActions({
   signUp: ['data'],
   signUpSuccess: [],
   signUpFailure: ['error'],
-  checkUserSession: []
+  checkUserSession: [],
+  purgeStore: [] // for development
 });
 
 export { Types, Creators };

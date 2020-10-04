@@ -3,13 +3,13 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-  apiKey: "AIzaSyCpo_Cnun5J1tzu7WEWDi-41644e7s5WeM",
-  authDomain: "tveks-7bd0d.firebaseapp.com",
-  databaseURL: "https://tveks-7bd0d.firebaseio.com",
-  projectId: "tveks-7bd0d",
-  storageBucket: "tveks-7bd0d.appspot.com",
-  messagingSenderId: "688558364783",
-  appId: "1:688558364783:web:b427b4a5ea9e3c5830959a"
+  apiKey: 'AIzaSyCpo_Cnun5J1tzu7WEWDi-41644e7s5WeM',
+  authDomain: 'tveks-7bd0d.firebaseapp.com',
+  databaseURL: 'https://tveks-7bd0d.firebaseio.com',
+  projectId: 'tveks-7bd0d',
+  storageBucket: 'tveks-7bd0d.appspot.com',
+  messagingSenderId: '688558364783',
+  appId: '1:688558364783:web:b427b4a5ea9e3c5830959a'
 };
 
 firebase.initializeApp(config);

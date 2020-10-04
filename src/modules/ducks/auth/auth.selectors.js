@@ -1,8 +1,5 @@
 import { createSelector } from 'reselect';
 
-const selectUser = (state) => state.userReducer;
+const selectAuth = (state) => state.auth;
 
-export const selectCurrentUser = createSelector(
-  [selectUser],
-  (userReducer) => userReducer.currentUser
-);
+export const selectCurrentUser = createSelector([selectAuth], ({ currentUser }) => currentUser);

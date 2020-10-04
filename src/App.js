@@ -1,74 +1,47 @@
 import React from 'react';
-import './App.css';
+import PropTypes from 'prop-types';
+import SignInPage from './pages/sign-in/sign-in.component';
+import AppContainer from './app.container';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams
-} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from './modules/ducks/auth/auth.selectors';
+import { Creators } from './modules/ducks/auth/auth.actions';
 
-import { createBrowserHistory } from 'history';
-
-import Player from 'react-player'
-
-const history = createBrowserHistory();
-
-const Home = () => {
-  let { channel } = useParams();
-  let [selectedChannel, setSelectedChannel] = React.useState(channel);
-  let [error, setError] = React.useState(null);
-
-  const maxNumberChannel = 99;
-
-  React.useEffect(() => {
-    console.log({selectedChannel});
-    if (parseInt(selectedChannel) < 1) {
-      setSelectedChannel(maxNumberChannel)
-    }
-    if (parseInt(selectedChannel) > maxNumberChannel) {
-      setSelectedChannel(1)
-    }
-    history.push(`/${selectedChannel}`);
-  }, [selectedChannel])
-
-  const nextChannel = () => {
-    channel = parseInt(selectedChannel) + 1;
-    setSelectedChannel(channel);
-    setError(null);
+class App extends React.Component {
+  componentDidMount() {
+    this.props.checkUserSessionAction();
   }
 
-  const prevChannel = () => {
-    channel = parseInt(selectedChannel) - 1;
-    setSelectedChannel(channel);
-    setError(null);
-  }
+  handleLogout = () => {
+    // this.props.purgeStoreAction();
+    this.props.signOutAction();
+  };
 
-  const handleError = () => {
-    setError('error loading video, try other channels.');
+  render() {
+    return this.props.currentUser ? (
+      <AppContainer logoutAction={this.handleLogout} />
+    ) : (
+      <SignInPage />
+    );
   }
-  
-  return (
-    <div>
-      <Player url={`http://195.181.160.220:2080/${selectedChannel}/video.m3u8`} controls onError={() => handleError()} />
-      <button onClick={() => prevChannel()}>prev</button>
-      <button onClick={() => nextChannel()}>next</button>
-      <p>{selectedChannel}</p>
-      {error ? <p>{error}</p> : null}
-    </div>
-  );  
-};
-
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/:channel">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
-  );
 }
 
-export default App;
+App.propTypes = {
+  currentUser: PropTypes.object,
+  checkUserSessionAction: PropTypes.func,
+  signOutAction: PropTypes.func,
+  purgeStoreAction: PropTypes.func
+};
+
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
+});
+
+const actions = {
+  checkUserSessionAction: Creators.checkUserSession,
+  signOutAction: Creators.signOut,
+  purgeStoreAction: Creators.purgeStore
+};
+
+export default connect(mapStateToProps, actions)(App);

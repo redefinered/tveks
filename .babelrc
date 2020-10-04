@@ -1,0 +1,23 @@
+{
+  "presets": [
+    "react",
+    "es2015",
+    "stage-0",
+    [ "env", {
+      "targets": {
+      "browsers": "> 2%"
+      }
+    }]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel",
+        "transform-class-properties"
+      ]
+    },
+    "production": {
+      "presets": ["react-optimize"]
+    }
+  }
+}
