@@ -56,7 +56,7 @@ const AppContainer = ({ logoutAction, currentUser }) => {
       </AppBar>
 
       <Switch>
-        <Route path="/:channel" component={HomePage} />
+        <Route path="/" component={HomePage}  />
       </Switch>
     </React.Fragment>
   );

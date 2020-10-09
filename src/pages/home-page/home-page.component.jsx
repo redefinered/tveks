@@ -1,7 +1,7 @@
 import React from 'react';
 import Player from 'react-player';
-import { useParams } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
+// import { useParams } from 'react-router-dom';
+// import { createBrowserHistory } from 'history';
 
 import Box from '@material-ui/core/Box';
 import IconButton from '@material-ui/core/IconButton';
@@ -13,34 +13,34 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Alert from '@material-ui/lab/Alert';
 import Container from '@material-ui/core/Container';
 
-const history = createBrowserHistory();
+// const history = createBrowserHistory();
 
 const HomePage = () => {
-  let { channel } = useParams();
-  let [selectedChannel, setSelectedChannel] = React.useState(channel);
+  // let { channel } = useParams();
+  let [channel, setSelectedChannel] = React.useState(1);
   let [error, setError] = React.useState(null);
 
   const maxNumberChannel = 99;
 
   React.useEffect(() => {
-    console.log({ selectedChannel });
-    if (parseInt(selectedChannel) < 1) {
+    // console.log({ selectedChannel });
+    if (parseInt(channel) < 1) {
       setSelectedChannel(maxNumberChannel);
     }
-    if (parseInt(selectedChannel) > maxNumberChannel) {
+    if (parseInt(channel) > maxNumberChannel) {
       setSelectedChannel(1);
     }
-    history.push(`/${selectedChannel}`);
-  }, [selectedChannel]);
+    // history.push(`/${selectedChannel}`);
+  }, [channel]);
 
   const nextChannel = () => {
-    channel = parseInt(selectedChannel) + 1;
+    channel = parseInt(channel) + 1;
     setSelectedChannel(channel);
     setError(null);
   };
 
   const prevChannel = () => {
-    channel = parseInt(selectedChannel) - 1;
+    channel = parseInt(channel) - 1;
     setSelectedChannel(channel);
     setError(null);
   };
@@ -52,7 +52,7 @@ const HomePage = () => {
   return (
     <Container maxWidth="sm">
       <Box my={2} style={{ textAlign: 'right' }}>
-        <Channels maxNumberChannel={maxNumberChannel} selectedChannel={selectedChannel} />
+        <Channels maxNumberChannel={maxNumberChannel} selectedChannel={channel} />
         <IconButton onClick={() => prevChannel()}>
           <NavigateBeforeIcon />
         </IconButton>
@@ -67,7 +67,7 @@ const HomePage = () => {
           </Alert>
         )}
         <Player
-          url={`http://195.181.160.220:2080/${selectedChannel}/video.m3u8`}
+          url={`http://195.181.160.220:2080/${channel}/video.m3u8`}
           controls
           onError={() => handleError()}
           onBuffer={() => console.log('Buffering...')}
