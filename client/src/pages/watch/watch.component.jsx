@@ -1,8 +1,5 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import Player from 'react-player';
-// import { useParams } from 'react-router-dom';
-// import { createBrowserHistory } from 'history';
-
 import Box from '@material-ui/core/Box';
 import IconButton from '@material-ui/core/IconButton';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
@@ -13,14 +10,13 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Alert from '@material-ui/lab/Alert';
 import Container from '@material-ui/core/Container';
 
-// const history = createBrowserHistory();
+import Player from 'react-player';
 
-const HomePage = () => {
-  // let { channel } = useParams();
-  let [channel, setSelectedChannel] = React.useState(1);
+export default function Watch({ history, match: { params } }) {
+  let [channel, setSelectedChannel] = React.useState(params.channel);
   let [error, setError] = React.useState(null);
 
-  const maxNumberChannel = 99;
+  const maxNumberChannel = 999;
 
   React.useEffect(() => {
     // console.log({ selectedChannel });
@@ -30,13 +26,14 @@ const HomePage = () => {
     if (parseInt(channel) > maxNumberChannel) {
       setSelectedChannel(1);
     }
-    // history.push(`/${selectedChannel}`);
+    history.push(`/channel/${channel}`);
   }, [channel]);
 
   const nextChannel = () => {
     channel = parseInt(channel) + 1;
     setSelectedChannel(channel);
     setError(null);
+    // history.push(`/${selectedChannel}`)
   };
 
   const prevChannel = () => {
@@ -76,7 +73,7 @@ const HomePage = () => {
       </Box>
     </Container>
   );
-};
+}
 
 // eslint-disable-next-line react/prop-types
 const Channels = ({ maxNumberChannel, selectedChannel }) => {
@@ -116,5 +113,3 @@ const Channels = ({ maxNumberChannel, selectedChannel }) => {
     </React.Fragment>
   );
 };
-
-export default HomePage;
